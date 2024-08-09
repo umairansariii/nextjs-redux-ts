@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import StoreProvider from "./StoreProvider";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -15,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={interFont.className}>{children}</body>
-    </html>
+    <StoreProvider>
+      <html lang="en">
+        <body className={interFont.className}>{children}</body>
+      </html>
+    </StoreProvider>
   );
 }
