@@ -1,0 +1,49 @@
+.container {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 15px;
+  background-color: rgb(245, 245, 245);
+  transition: background-color 100ms;
+}
+
+.container:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.bottomContainer {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 10px;
+}
+
+.detailsGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: opacity 300ms;
+  opacity: 1;
+}
+
+.container:hover .detailsGroup {
+  opacity: 0;
+}
+
+.title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  max-width: 100px;
+}
+
+.price {
+  font-size: 16px;
+}
