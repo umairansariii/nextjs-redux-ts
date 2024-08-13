@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+}
+
+.container svg {
+  fill: #ff9628;
+}
+
+.container[data-size="small"] svg {
+  height: 16px;
+  width: 16px;
+}
+
+.container[data-size="medium"] svg {
+  height: 20px;
+  width: 20px;
+}
+
+.container[data-size="large"] svg {
+  height: 24px;
+  width: 24px;
+}
