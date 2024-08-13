@@ -1,7 +1,10 @@
+import ProductFeed from "./components/ProductFeed/ProductFeed";
+import styles from "./styles/layouts.module.css";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Hello, World!</h1>
+    <div className={styles.centerLayout}>
+      <ProductFeed />
     </div>
   );
 }
