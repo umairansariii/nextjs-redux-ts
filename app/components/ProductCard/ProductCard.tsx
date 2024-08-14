@@ -11,7 +11,7 @@ function ProductCard({
   thumbnail,
 }: ProductCardProps) {
   return (
-    <Link href={`/product/${id}`}>
+    <Link href={`/products/${id}`}>
       <div className={styles.container}>
         <img src={thumbnail} />
         <div className={styles.bottomContainer}>
