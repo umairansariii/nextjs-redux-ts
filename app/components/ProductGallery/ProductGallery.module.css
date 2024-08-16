@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  height: 450px;
+  width: 450px;
+}
+
+.imagesGroup {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.imageTile {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
+  background-color: rgb(245, 245, 245);
+}
+
+.imageTile:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.imageTile img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.imageContainer {
+  height: 450px;
+  width: 330px;
+  padding: 10px;
+  padding-left: 0px;
+}
+
+.imagePreview {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 245);
+}
+
+.imagePreview img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.scrollButton {
+  position: absolute;
+  display: grid;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  transition: opacity 100ms;
+  opacity: 0;
+}
+
+.imageTile:hover .scrollButton {
+  opacity: 1;
+}
+
+.scrollButton svg {
+  margin: auto;
+}
