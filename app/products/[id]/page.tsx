@@ -1,5 +1,7 @@
 import { ProductSchema } from "@/app/types/schemas";
 import ProductGallery from "@/app/components/ProductGallery/ProductGallery";
+import ProductDetail from "@/app/components/ProductDetail/ProductDetail";
+import sections from "@/app/styles/sections.module.css";
 import layouts from "@/app/styles/layouts.module.css";
 
 async function Products({ params }: { params: { id: number } }) {
@@ -8,11 +10,12 @@ async function Products({ params }: { params: { id: number } }) {
     { cache: "force-cache" }
   ).then((res) => res.json());
 
-  const { images } = data;
-
   return (
     <div className={layouts.centerLayout}>
-      <ProductGallery images={images} />
+      <div className={sections.productMetaSection}>
+        <ProductGallery {...data} />
+        <ProductDetail {...data} />
+      </div>
     </div>
   );
 }
