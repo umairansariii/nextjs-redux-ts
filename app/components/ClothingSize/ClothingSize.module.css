@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  gap: 8px;
+}
+
+.sizeTile {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  font-size: 14px;
+  border-radius: 12px;
+  background-color: rgb(240, 240, 240);
+}
+
+.sizeTile:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.sizeTile[data-active="true"] {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
+
+.sizeTile[data-disabled="true"] {
+  cursor: not-allowed;
+  color: rgb(160, 160, 160);
+  background-color: rgb(245, 245, 245);
+}
